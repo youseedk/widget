@@ -13,10 +13,10 @@ body {
 
 .widget-body {
   background: #999;
-  animation-duration: .5s;
+  animation-duration: 0.5s;
   animation-fill-mode: both;
   animation-name: slideInDown;
-  animation-delay: .5s;
+  animation-delay: 0.5s;
 }
 
 #widget {
@@ -36,7 +36,7 @@ body {
   border-radius: 16px;
   padding: 2px 16px;
   height: 32px;
-  transition: background .2s;
+  transition: background 0.2s;
 }
 
 .widget-button:hover {
@@ -48,7 +48,6 @@ body {
   width: 22px;
   margin-right: 8px;
 }
-
 
 #content {
   background: transparent;
@@ -120,7 +119,6 @@ body {
   background-image: url("data:image/svg+xml,%3csvg viewBox%3d%22-1 -2 16 16%22 xmlns%3d%22http://www.w3.org/2000/svg%22%3e%3cpath fill%3d%22none%22 fill-rule%3d%22evenodd%22 stroke%3d%22%231fab2e%22 stroke-linecap%3d%22round%22 stroke-linejoin%3d%22round%22 stroke-width%3d%222%22 d%3d%22M1 6.16534L5.68013 11 13 1%22/%3e%3c/svg%3e");
 }
 
-
 @keyframes slideInDown {
   from {
     transform: translate3d(0, -50px, 0);
@@ -131,3 +129,106 @@ body {
   }
 }
 
+.bem-resultpane {
+  position: fixed;
+  box-sizing: border-box;
+  top: 50%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font: normal 16px/1.4 monospace, arial, verdana, sans-serif;
+  border-top: 1px solid orange;
+  background: white;
+  color: darkgrey;
+  z-index: 10000;
+  text-align: left;
+}
+
+.bem-resultpane__header {
+  margin: 0;
+  padding: 0 8px;
+  height: 32px;
+  background-color: pink;
+  border-bottom: 1px solid orange;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 31px;
+}
+
+.bem-resultpane strong {
+  color: red;
+}
+
+.bem-resultpane__close {
+  float: right;
+  border: 0;
+  background: 0;
+  font-size: 0;
+  line-height: 1;
+  color: grey;
+}
+
+.bem-resultpane::after {
+  content: "\00d7";
+  font-size: 30px;
+}
+
+.bem-resultpane:hover::after {
+  color: black;
+}
+
+.bem-resultpane__list {
+  position: absolute;
+  top: 33px;
+  left: 0;
+  right: 0;
+  bottom: 0; /* todo: move above toolbar */
+  margin: 0;
+  padding: 0;
+  background: white;
+  overflow-y: auto;
+}
+
+.bem-resultpane__item {
+  position: relative;
+  border-bottom: 1px solid grey;
+  margin: 0;
+  padding: 4px 8px 4px 28px;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.bem-resultpane::before {
+  position: absolute;
+  content: "\2716";
+  left: 4px;
+  top: 0;
+  line-height: 28px;
+  color: red;
+}
+
+.bem-resultpane code {
+  background: yellow;
+  outline: 3px solid yellow;
+}
+
+.bem-resultpane--success::before {
+  content: "";
+  top: 4px;
+  left: 8px;
+  color: green;
+  width: 6px;
+  height: 12px;
+  border-right: 4px solid green;
+  border-bottom: 4px solid green;
+  transform: rotate(45deg);
+}
+
+.bem-error-item {
+  outline: 2px solid red;
+}
+
+.is-bemvalidation {
+  padding-bottom: 50%;
+}
