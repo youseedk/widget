@@ -1,15 +1,17 @@
-* {
+.widget-html {
   margin: 0;
   padding: 0;
   outline: 0;
   box-sizing: border-box;
-}
-
-html,
-body {
   width: 100%;
   height: 100%;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.widget-body * {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
 }
 
 .widget-body {
@@ -19,18 +21,45 @@ body {
   animation-name: slideInDown;
   animation-delay: 0.5s;
   min-width: 540px;
+  width: 100%;
+  height: 100%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: #999;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
 }
 
 #youseeWrapper {
   height: 100%;
   width: 100%;
-  background: #aeaeae;
 }
 
 #youseeWidget {
-  background: #600bdc;
   height: 50px;
   padding: 10px;
+  animation: colorchange 120s infinite; /* animation-name followed by duration in seconds*/
+}
+
+@keyframes colorchange {
+  0% {
+    background:  #600bdc;
+  }
+  25% {
+    background: #2f2633
+  }
+  50% {
+    background: #027b7d
+  }
+  75% {
+    background: #670f0f
+  }
+  100% {
+    background: #635d01
+  }
 }
 
 .clean-button {
@@ -40,6 +69,7 @@ body {
   justify-content: center;
   background: none;
   border: 0;
+  vertical-align: bottom;
 }
 
 .widget-button {
@@ -47,7 +77,7 @@ body {
   align-items: center;
   flex-flow: row nowrap;
   justify-content: center;
-  background: #07036b;
+  background: rgba(0,0,0, .5);
   color: #fff;
   border: none;
   border-radius: 16px;
@@ -57,7 +87,7 @@ body {
 }
 
 .widget-button:hover {
-  background: #504e7d;
+  background: rgba(0,0,0, .3);
 }
 
 .icon-wrapper {
@@ -74,6 +104,14 @@ body {
   width: 20px;
 }
 
+.icon-desktop {
+  width: 40px;
+}
+
+.icon-fullsize {
+  width: 25px;
+}
+
 #content {
   position: relative;
   background: transparent;
@@ -88,7 +126,7 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
 #youseeWrapperIphone {
@@ -101,7 +139,7 @@ body {
   width: 541px;
   opacity: 0;
   transform: translateY(18px);
-  transition: all 1s;
+  transition: all 0.5s;
   transform: scale(1);
   pointer-events: none;
 }
@@ -115,11 +153,24 @@ body {
   width: 987px;
   opacity: 0;
   transform: translateY(18px);
-  transition: all 1s;
+  transition: all 0.5s;
   transform: scale(1);
   pointer-events: none;
 }
 
+#youseeWrapperMacBook {
+  position: absolute;
+  margin: auto;
+  top: 80px;
+  left: 0;
+  right: 0;
+  width: 1680px;
+  opacity: 0;
+  transform: translateY(18px);
+  transition: all 0.5s;
+  transform: scale(1);
+  pointer-events: none;
+}
 
 .ys-toggle-switch {
   display: inline-flex;
@@ -131,6 +182,7 @@ body {
   line-height: 1.5;
   padding-right: 50px;
   color: #fff;
+  font-size: 12px;
 }
 
 .ys-toggle-switch__label::after {
@@ -141,7 +193,7 @@ body {
   top: 4px;
   width: 40px;
   height: 16px;
-  background-color: #504e7d;
+  background-color: rgba(0,0,0, .3);
   border-radius: 14px;
   transition: all 0.2s ease;
 }
@@ -170,7 +222,7 @@ body {
 }
 
 .ys-toggle-switch__control:checked + .ys-toggle-switch__label::after {
-  background-color: #07036b;
+  background-color: rgba(0,0,0, .5);
 }
 
 .ys-toggle-switch__control:checked + .ys-toggle-switch__label::before {

@@ -40,7 +40,7 @@ chrome.runtime.onMessage.addListener(
       </button>
   
       <div class="ys-toggle-switch">
-          <figure class="icon-wrapper">
+      <!--<figure class="icon-wrapper">
               <svg width="100%" height="100%" viewbox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
                   <g fill="#FFF" fill-rule="nonzero">
                       <path
@@ -49,13 +49,13 @@ chrome.runtime.onMessage.addListener(
                           d="M40 .11C17.97.11.11 17.97.11 40S17.97 79.89 40 79.89 79.89 62.03 79.89 40C79.868 17.979 62.021.132 40 .11zm0 71.78C22.388 71.89 8.11 57.612 8.11 40 8.11 22.388 22.388 8.11 40 8.11c17.612 0 31.89 14.278 31.89 31.89C71.873 57.606 57.606 71.873 40 71.89z" />
                   </g>
               </svg>
-          </figure>
+          </figure>-->
           <input type="checkbox" id="featureEditText" class="ys-toggle-switch__control" />
           <label for="featureEditText" class="ys-toggle-switch__label">Edit Text</label>
       </div>
   
       <div class="ys-toggle-switch">
-          <figure class="icon-wrapper">
+      <!--<figure class="icon-wrapper">
               <svg width="100%" height="100%" viewbox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
                   <g fill="#FFF" fill-rule="nonzero">
                       <path
@@ -64,14 +64,14 @@ chrome.runtime.onMessage.addListener(
                           d="M40 .11C17.97.11.11 17.97.11 40S17.97 79.89 40 79.89 79.89 62.03 79.89 40C79.868 17.979 62.021.132 40 .11zm0 71.78C22.388 71.89 8.11 57.612 8.11 40 8.11 22.388 22.388 8.11 40 8.11c17.612 0 31.89 14.278 31.89 31.89C71.873 57.606 57.606 71.873 40 71.89z" />
                   </g>
               </svg>
-          </figure>
+          </figure>-->
           <input type="checkbox" id="featureShowGrid" class="ys-toggle-switch__control" />
           <label for="featureShowGrid" class="ys-toggle-switch__label">DNA Grid</label>
       </div>
   
   
   
-      <button type="button" id="featureIphoneSize" class="clean-button">
+      <button type="button" id="featureIphoneSize" class="clean-button mgb">
           <figure class="icon-iphone">
               <svg width="100%" height="100%" viewBox="0 0 289 443" version="1.1" xmlns="http://www.w3.org/2000/svg"
                   xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -86,7 +86,7 @@ chrome.runtime.onMessage.addListener(
           </figure>
       </button>
   
-      <button type="button" id="featureIpadSize" class="clean-button">
+      <button type="button" id="featureIpadSize" class="clean-button mgb">
           <figure class="icon-ipad">
               <svg width="100%" height="100%" viewBox="0 0 289 443" version="1.1" xmlns="http://www.w3.org/2000/svg"
                   xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -101,24 +101,22 @@ chrome.runtime.onMessage.addListener(
           </figure>
       </button>
   
-      <button type="button" id="featureDesktopSize" class="clean-button">
-          <figure class="icon-ipad">
+      <button type="button" id="featureDesktopSize" class="clean-button mgb">
+          <figure class="icon-desktop">
   
-              <svg width="100%" height="100%" viewBox="0 0 64 56" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink">
-                  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                      <g id="noun_desktop_2774732" fill="#fff" fill-rule="nonzero">
-                          <path
-                              d="M62,0 L2,0 C0.896,0 0,0.896 0,2 L0,42 C0,43.104 0.896,44 2,44 L30,44 L30,52 L22,52 C20.896,52 20,52.896 20,54 C20,55.104 20.896,56 22,56 L42,56 C43.104,56 44,55.104 44,54 C44,52.896 43.104,52 42,52 L34,52 L34,44 L62,44 C63.104,44 64,43.104 64,42 L64,2 C64,0.896 63.104,0 62,0 Z M60,40 L4,40 L4,4 L60,4 L60,40 Z"
-                              id="Shape"></path>
-                      </g>
-                  </g>
-              </svg>
+
+          <svg width="100%" height="100%" viewBox="0 0 90 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="noun_macbook_354906" fill="#FFFFFF" fill-rule="nonzero">
+                  <path d="M87,45.8 L79.9,45.8 C79.9,45.7 79.9,45.5 79.9,45.4 L79.9,6.7 C79.9,3.2 77,0.3 73.5,0.3 L15.4,0.3 C11.9,0.3 9,3.2 9,6.7 L9,45.4 C9,45.5 9,45.7 9,45.8 L3,45.8 C1.4,45.8 0,47.1 0,48.8 C0,50.4 1.3,51.8 3,51.8 L87,51.8 C88.6,51.8 90,50.5 90,48.8 C90,47.1 88.7,45.8 87,45.8 Z M44.6,1.6 C45.5,1.6 46.2,2.3 46.2,3.2 C46.2,4.1 45.5,4.8 44.6,4.8 C43.7,4.8 43,4.1 43,3.2 C43,2.3 43.7,1.6 44.6,1.6 Z M50,48 L39.1,48 C38.5,48 38,47.5 38,46.9 C38,46.3 38.5,45.8 39.1,45.8 L50,45.8 C50.6,45.8 51.1,46.3 51.1,46.9 C51.1,47.5 50.6,48 50,48 Z M73.5,42.3 L15.7,42.3 L15.7,5.8 L73.5,5.8 L73.5,42.3 Z M85.7,49 L83.2,49 C83,49 82.9,48.9 82.9,48.7 C82.9,48.5 83,48.4 83.2,48.4 L85.7,48.4 C85.9,48.4 86,48.5 86,48.7 C86,48.9 85.8,49 85.7,49 Z" id="Shape"></path>
+              </g>
+          </g>
+      </svg>
           </figure>
       </button>
   
-      <button type="button" id="featureFullSize" class="clean-button">
-          <figure class="icon-ipad">
+      <button type="button" id="featureFullSize" class="clean-button mgb">
+          <figure class="icon-fullsize">
   
               <svg width="100%" height="100%" viewBox="0 0 62 62" version="1.1" xmlns="http://www.w3.org/2000/svg"
                   xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -144,14 +142,18 @@ chrome.runtime.onMessage.addListener(
   </div>
   <main id="youseeWrapper">
       <img id="youseeWrapperIphone" src="https://s.c.dk/images/yousee/toolbar/iphonex.png">
-      <img id="youseeWrapperIpad" src="https://s.c.dk/images/yousee/toolbar/ipadair3.png">
+      <img id="youseeWrapperIpad" src="https://s.c.dk/images/yousee/toolbar/ipadair5.png">
+      <img id="youseeWrapperMacBook" src="https://s.c.dk/images/yousee/toolbar/macbook2.png">
       <iframe id="content" src="#" loading="eager" />
   </main>
         `
       //Append templates to dom
+      document.querySelector('html').classList.add('widget-html');
       document.head.innerHTML = templateHead;
       document.body.classList.add('widget-body');
       document.body.innerHTML = templateBody;
+
+      const screenSizeButtons = [...document.querySelectorAll('.mgb')];
 
       //Set iframe source
       const iframe = document.querySelector("#content");
@@ -165,45 +167,72 @@ chrome.runtime.onMessage.addListener(
           htmlValidator();
         });
 
-        //iphone fun
-        document.querySelector('#featureIphoneSize').addEventListener('click', () => {
+        const iphoneImage = document.querySelector('#youseeWrapperIphone');
+        const ipadImage = document.querySelector('#youseeWrapperIpad');
+        const macBookImage = document.querySelector('#youseeWrapperMacBook');
 
-          if (document.body.classList.contains('yousee-iphone')) {
-            document.body.classList.remove('yousee-iphone');
-            document.querySelector('#youseeWrapperIphone').setAttribute('style', 'opacity: 0; transform: scale(0) translateY(18px)');
-            //setTimeout(function () {
-            iframe.removeAttribute('style');
-            iframe.setAttribute('style', 'position: absolute;');
-            //}, 200);
-            setTimeout(function () {
-              iframe.setAttribute('style', 'position: relative;');
-            }, 500);
-          } else {
-            document.body.classList.add('yousee-iphone');
-            iframe.setAttribute('style', 'position: absolute; width: 375px; height: 636px;');
-            document.querySelector('#youseeWrapperIphone').setAttribute('style', 'opacity: 1; transform: scale(1) translateY(18px)');
-          }
+
+        //iphone fun
+        document.querySelector('#featureIphoneSize').addEventListener('click', function () {
+          screenSizeButtons.forEach(function (el) {
+            el.removeAttribute('disabled');
+          });
+          this.setAttribute('disabled', 'disabled');
+
+          iframe.setAttribute('style', 'position: absolute; width: 375px; height: 636px;');
+          iphoneImage.setAttribute('style', 'opacity: 1; transform: scale(1) translateY(18px)');
+          ipadImage.setAttribute('style', 'opacity: 0;');
+          macBookImage.setAttribute('style', 'opacity: 0;');
         });
 
         //ipad fun
-        document.querySelector('#featureIpadSize').addEventListener('click', () => {
+        document.querySelector('#featureIpadSize').addEventListener('click', function () {
+          screenSizeButtons.forEach(function (el) {
+            el.removeAttribute('disabled');
+          });
+          this.setAttribute('disabled', 'disabled');
 
-          if (document.body.classList.contains('yousee-ipad')) {
-            document.body.classList.remove('yousee-ipad');
-            document.querySelector('#youseeWrapperIpad').setAttribute('style', 'opacity: 0; transform: scale(0) translateY(18px)');
-            //setTimeout(function () {
-            iframe.removeAttribute('style');
-            iframe.setAttribute('style', 'position: absolute;');
-            //}, 200);
-            setTimeout(function () {
-              iframe.setAttribute('style', 'position: relative;');
-            }, 500);
-          } else {
-            document.body.classList.add('yousee-ipad');
-            iframe.setAttribute('style', 'position: absolute; width: 768px; height: 941px; top: 265px; bottom: 0;');
-            document.querySelector('#youseeWrapperIpad').setAttribute('style', 'opacity: 1; transform: scale(1)');
-          }
+
+          iframe.setAttribute('style', 'position: absolute; width: 768px; height: 942px; top: 310px; bottom: 0;');
+          ipadImage.setAttribute('style', 'opacity: 1; transform: scale(1)');
+          iphoneImage.setAttribute('style', 'opacity: 0;');
+          macBookImage.setAttribute('style', 'opacity: 0;');
         });
+
+        //macbook fun
+        document.querySelector('#featureDesktopSize').addEventListener('click', function () {
+          screenSizeButtons.forEach(function (el) {
+            el.removeAttribute('disabled');
+          });
+          this.setAttribute('disabled', 'disabled');
+
+          iframe.setAttribute('style', 'position: absolute; width: 1280px; height: 736px; top: -98px; bottom: 0;');
+          macBookImage.setAttribute('style', 'opacity: 1; transform: scale(1)');
+          iphoneImage.setAttribute('style', 'opacity: 0;');
+          ipadImage.setAttribute('style', 'opacity: 0;');
+        });
+
+
+        //full screen
+        document.querySelector('#featureFullSize').addEventListener('click', function () {
+          screenSizeButtons.forEach(function (el) {
+            el.removeAttribute('disabled');
+          });
+          this.setAttribute('disabled', 'disabled');
+
+          //document.querySelector('#youseeWrapperIphone').setAttribute('style', 'opacity: 0; transform: scale(0) translateY(18px)');
+
+          iframe.removeAttribute('style');
+          iframe.setAttribute('style', 'position: absolute;');
+          ipadImage.setAttribute('style', 'opacity: 0;');
+          iphoneImage.setAttribute('style', 'opacity: 0;');
+          macBookImage.setAttribute('style', 'opacity: 0;');
+
+          setTimeout(function () {
+            iframe.setAttribute('style', 'position: relative;');
+          }, 500);
+        });
+
 
         //BEM validator
         document.querySelector('#featureBemValidator').addEventListener('click', () => {
