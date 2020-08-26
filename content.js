@@ -260,24 +260,105 @@ chrome.runtime.onMessage.addListener(
 
               const gridHTML = `
           <div class="widget-grid-styles">
-            <style>.widget-grid-overlay{background:rgba(255,255,255,.3)}.widget-grid,.widget-grid-overlay{position:fixed;top:0;bottom:0;height:100%;width:100%;z-index:999999999999999;pointer-events:none}.widget-grid .ys-row{border:none;background:0 0}.widget-grid .ys-row::after{content:none}.ys-row{position:relative;background:#e7d5f7}.ys-col-12:only-child::after{top:25px!important}.ys-row::after{content:'ys-row';position:absolute;background:#9e3bf7;padding:3px;top:0;left:0;color:#fff}.widget-grid .ys-container [class*=col],.widget-grid .ys-container-fluid [class*=col]{background:0 0;display:block;height:100vh;padding:.5rem;border:1px solid #00000026;border-right:0;text-align:center;text-shadow: 0px 0px 17px #600bdc;}.ys-container [class*=col],.ys-container-fluid [class*=col]{background:#efa8de}.widget-grid .ys-container [class*=col]::after,.widget-grid .ys-container-fluid [class*=col]::after{content:none}.widget-grid .ys-container [class*=col]:last-of-type,.widget-grid .ys-container-fluid [class*=col]:last-of-type{border-right:1px solid #00000026}.ys-container [class*=col]::after,.ys-container-fluid [class*=col]::after{content:'ys-col';position:absolute;padding:3px;top:0;left:0;background:#e26ec6}</style>
+          <style>
+          .widget-grid-overlay {
+            /*background: rgba(255, 255, 255, .3)*/
+          }
+          
+          .widget-grid,
+          .widget-grid-overlay {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 999999999999999;
+            pointer-events: none
+          }
+          
+          .widget-grid .ys-row::after {
+            content: none
+          }
+
+          .widget-grid .ys-row{
+            background: none
+          }
+          /*
+          .ys-row {
+            position: relative;
+            background: #e7d5f7
+          }
+          
+          .ys-col-12:only-child::after {
+            top: 25px!important
+          }
+          
+          .ys-row::after {
+            content: 'ys-row';
+            position: absolute;
+            background: #9e3bf7;
+            padding: 3px;
+            top: 0;
+            left: 0;
+            color: #fff
+          }
+          */
+          
+          .widget-grid .ys-container [class*=col],
+          .widget-grid .ys-container-fluid [class*=col] {
+            background: 0 0;
+            display: block;
+            height: 100vh;
+            text-align: center;
+            text-shadow: 0px 0px 17px #600bdc;
+          }
+          /*
+          .ys-container [class*=col],
+          .ys-container-fluid [class*=col] {
+            background: #efa8de
+          }
+          
+          .widget-grid .ys-container [class*=col]::after,
+          .widget-grid .ys-container-fluid [class*=col]::after {
+            content: none;
+          }
+*/
+          .mgb {
+            background: rgba(238, 3, 230, .5);
+            width: 100%;
+            height: 100%;
+            padding-top: 10px;
+          }
+        
+          /*
+          .ys-container [class*=col]::after,
+          .ys-container-fluid [class*=col]::after {
+            content: 'ys-col';
+            position: absolute;
+            padding: 3px;
+            top: 0;
+            left: 0;
+            background: #e26ec6
+          }
+          */
+          </style>
           </div>
           <div class="widget-grid-overlay"></div>
           <aside class="widget-grid">
             <div class="ys-container-fluid widget">
               <div class="ys-row">
-                <div class="ys-col-1">1</div>
-                <div class="ys-col-1">2</div>
-                <div class="ys-col-1">3</div>
-                <div class="ys-col-1">4</div>
-                <div class="ys-col-1">5</div>
-                <div class="ys-col-1">6</div>
-                <div class="ys-col-1">7</div>
-                <div class="ys-col-1">8</div>
-                <div class="ys-col-1">9</div>
-                <div class="ys-col-1">19</div>
-                <div class="ys-col-1">11</div>
-                <div class="ys-col-1">12</div>
+                <div class="ys-col-1"><div class="mgb">Col 1</div></div>
+                <div class="ys-col-1"><div class="mgb">Col 2</div></div>
+                <div class="ys-col-1"><div class="mgb">Col 3</div></div>
+                <div class="ys-col-1"><div class="mgb">Col 4</div></div>
+                <div class="ys-col-1"><div class="mgb">Col 5</div></div>
+                <div class="ys-col-1"><div class="mgb">Col 6</div></div>
+                <div class="ys-col-1"><div class="mgb">Col 7</div></div>
+                <div class="ys-col-1"><div class="mgb">Col 8</div></div>
+                <div class="ys-col-1"><div class="mgb">Col 9</div></div>
+                <div class="ys-col-1"><div class="mgb">Col 10</div></div>
+                <div class="ys-col-1"><div class="mgb">Col 11</div></div>
+                <div class="ys-col-1"><div class="mgb">Col 12</div></div>
               </div>
             </div>
           </aside>
